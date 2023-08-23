@@ -1,23 +1,38 @@
+import { arrowRight } from "../assets/icons";
+import { offer } from "../assets/images";
 import Button from "../components/Button";
 
 const SpecialOffer = () => {
   return (
-    <section>
+    <section className="flex justify-wrap items-center max-xl:flex-col-reverse gap-10 max-container">
+      <div className="flex-1">
+        <img
+          src={offer}
+          alt="offer"
+          width={773}
+          height={687}
+          className="object-contain w-full"
+        />
+      </div>
       <div className="flex flex-1 flex-col">
         <h2 className="mt-10 font-palanquin text-4xl capitalize font-bold lg:max-w-lg">
           Nike만의
           <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
-            독보적인
+            특별한
           </span>
-          <span className="text-coral-red inline-block mt-3">퀄리티</span>
+          <span className="text-coral-red inline-block mt-3">제안</span>
         </h2>
         <p className="mt-4 lg:max-w-lg info-text">
-          최고의 편안함과 스타일을 보장하는 나이키의 세심한 신경은 사용자의
-          만족도를 향상시켜 비교할 수 없는 품질, 혁신 및 뛰어남을 입증할 수
-          있습니다.
+          놀라운 절감 효과를 경험하여 당신의 기대치를 충족시켜줄 Special Offer
         </p>
-        <div className="mt-11">
-          <Button label="더 알아보기" />
+        <div className="mt-11 flex flex-wrap gap-4">
+          <Button label="구매하러 가기" iconUrl={arrowRight} />
+          <Button
+            label="자세히 알아보기"
+            backgroundColor="bg-white"
+            borderColor="border-slate-gray"
+            textColor="text-slate-gray"
+          />
         </div>
       </div>
     </section>
